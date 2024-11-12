@@ -18,5 +18,6 @@ namespace EntityLayer.Concreate
         public string WriterName { get; set; }
         public string WriterAbout { get; set; }
         public int WriterId { get; set; }
+
     }
 }
