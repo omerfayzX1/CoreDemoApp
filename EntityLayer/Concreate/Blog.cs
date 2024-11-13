@@ -17,5 +17,8 @@ namespace EntityLayer.Concreate
         public string BlogTitle { get; set; }
         public string ThumbnailImage { get; set; }
         public string BlogImage { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }
