@@ -8,15 +8,8 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-    public interface ICategoryDal
+    public interface ICategoryDal:IGenericDal<Category>
     {
-        //CRUD İşlemleri
-        #region
-        void AddCategory(Category category);
-        void UpdateCategory(Category category);
-        void DeleteCategory(Category category);
-        #endregion
-        List<Category> ListAllCategory();
-        Category GetById(int id);
+      
     }
 }
