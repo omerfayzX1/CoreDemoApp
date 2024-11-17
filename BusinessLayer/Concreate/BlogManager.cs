@@ -2,6 +2,7 @@
 using DataAccessLayer.Abstract;
 using EntityLayer.Concreate;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,9 +35,19 @@ namespace BusinessLayer.Concreate
 			throw new NotImplementedException();
 		}
 
-		public Blog GetById(int id)
+        public List<Blog> GetBlogListWithCategory()
+        {
+			return blogDal.GetListWithCategory();
+        }
+
+        public Blog GetById(int id)
 		{
 			throw new NotImplementedException();
+		}
+
+		public List<Blog> GetBlogById(int id)
+		{
+			return blogDal.GetListAll(x => x.BlogId == id);
 		}
 
 		public List<Blog> GetList()
